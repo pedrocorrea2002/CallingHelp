@@ -3,6 +3,8 @@ import { Alert } from 'react-native';
 import { HStack, Text, VStack, useTheme, ScrollView, Box } from 'native-base';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import firestore from '@react-native-firebase/firestore'
+import auth from '@react-native-firebase/auth'
+
 import { CircleWavyCheck, Hourglass, DesktopTower, ClipboardText } from 'phosphor-react-native';
 
 import { Header } from '../components/Header';
@@ -22,6 +24,9 @@ type OrderDetails = OrderProps & {
   description: string;
   solution: string;
   closed: string;
+  userOpener: string;
+  userCloser?: string;
+  openerEmail: string;
 }
 
 export function Details() {
@@ -64,7 +69,7 @@ export function Details() {
       .doc(orderId)
       .get()
       .then((doc) => {
-        const { patrimony, description, status, created_at, closed_at, solution } = doc.data()
+        const { patrimony, description, status, created_at, closed_at, solution, userOpener } = doc.data()
 
         const closed = closed_at ? dateFormat(closed_at) : null
 
@@ -75,7 +80,10 @@ export function Details() {
           status,
           solution,
           when: dateFormat(created_at),
-          closed
+          closed,
+          userOpener,
+          userCloser: auth().currentUser.displayName,
+          openerEmail: auth().currentUser.email
         })
 
         setIsLoading(false)
@@ -120,13 +128,13 @@ export function Details() {
           title="descrição do problema" 
           description={order.description}
           icon={ClipboardText}
-          footer={`Registrado em ${order.when}`}
+          footer={`Registrado em ${order.when} por ${order.userOpener}`}
         />
         <CardDetails 
           title="solução" 
           icon={CircleWavyCheck}
           description={order.solution}
-          footer={order.closed && `Encerrado em ${order.closed}`}
+          footer={order.closed && `Encerrado em ${order.closed} por ${order.userCloser}`}
         >
           {
             order.status === 'open' &&

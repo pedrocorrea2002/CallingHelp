@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Alert } from 'react-native';
 import { VStack } from 'native-base';
 import firestore from '@react-native-firebase/firestore'
+import auth from '@react-native-firebase/auth'
 import { useNavigation } from '@react-navigation/native';
 
 import { Header } from '../components/Header';
@@ -28,7 +29,9 @@ export function Register() {
         patrimony,
         description,
         status: 'open',
-        created_at: firestore.FieldValue.serverTimestamp()
+        created_at: firestore.FieldValue.serverTimestamp(),
+        userOpener: auth().currentUser.displayName,
+        openerEmail: auth().currentUser.email
       })
       .then(() => {
         Alert.alert('Solicitação','Solicitação registrada com sucesso!')

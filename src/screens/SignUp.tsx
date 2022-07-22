@@ -18,9 +18,10 @@ export function SignUp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [name, setName] = useState("");
 
     function handleSignUp() {
-        if(!email || !password || !confirmPassword){
+        if(!email || !password || !confirmPassword || !name){
             //! A EXECUÇÃO DO Alert.alert() não precisa do return, mas ele está ai para poder parar a execução da função
             return Alert.alert('Cadastrar','Preencha todos os campos!')
         }
@@ -35,6 +36,8 @@ export function SignUp() {
             .createUserWithEmailAndPassword(email, password)
             .then(response => {
                 console.log("Sign response:",response)
+
+                auth().currentUser.updateProfile({displayName: name})
             })
             .catch((error) => {
                 console.log("Sign error:",error.code)
@@ -62,6 +65,13 @@ export function SignUp() {
             {
                 //* Se quiser só o ícone sem nenhum estilo extra, ele pode ser passado como uma varíavel ao invés de como uma tag
             }
+            <Input 
+                mb={4}
+                placeholder="Nome completo" 
+                InputLeftElement={<Icon as={<Envelope color={colors.gray[300]}/>} ml={4}/>} 
+
+                onChangeText={setName}
+            />
             <Input 
                 mb={4}
                 placeholder="E-mail" 

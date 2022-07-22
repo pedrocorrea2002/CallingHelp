@@ -21,6 +21,7 @@ export function Home() {
 
     const [isLoading, setIsLoading] = useState(true);
     const [statusSelected, setStatusSelected] = useState<'open' | 'closed'>('open'); //* essas strings entre <> ajudam a limitar as opções valores que essa State pode receber
+    const [justMine, setJustMine] = useState(false)
     const [orders, setOrders] = useState<OrderProps[]>([]);
 
     function handleNewOrder(){
@@ -38,6 +39,7 @@ export function Home() {
                 console.log("SignOut error:",error)
                 return Alert.alert("Sair","Não foi possível sair!")
             })
+
     }
 
     useEffect(() => {
@@ -48,42 +50,55 @@ export function Home() {
                             .where('status','==',statusSelected)
                             .onSnapshot(snapshot => {
                                 const data = snapshot.docs.map(doc => {
-                                    const {patrimony,description,status,created_at} = doc.data()
+                                    const {patrimony,description,status,created_at,openerEmail} = doc.data()
 
-                                    return {
-                                        id: doc.id,
-                                        patrimony,
-                                        description,
-                                        status,
-                                        when: dateFormat(created_at)
+                                    //! CASO justMine FOR IGUAL A true, VÃO SER RETORNADOS SOMENTE OS ITENS ONDE O openerEmail FOR IGUAL AO EMAIL DO USUÁRIO
+                                    if((justMine && openerEmail === auth().currentUser.email) || !justMine){
+                                        return {
+                                            id: doc.id,
+                                            patrimony,
+                                            description,
+                                            status,
+                                            when: dateFormat(created_at)
+                                        }
                                     }
                                 })
 
-                                setOrders(data)
+                                console.log("Data:",data)
+                                
+                                setOrders(data.filter(a => a != undefined))
                                 setIsLoading(false)
                             })
 
         return subscriber
-    },[statusSelected])
+    },[statusSelected,justMine])
 
     return (
         <VStack flex={1} pb={6} bg="gray.700">
-            <HStack
-                w="full"
-                justifyContent="space-between"
-                alignItems="center"
-                bg="gray.600"
-                pt={12}
-                pb={5}
-                px={6}
-            >
-                <Logo />
+            <VStack bg="gray.600" px={6}>
+                <HStack
+                    w="full"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    bg="gray.600"
+                    pt={12}
+                    pb={5}
+                >
+                    <Logo />
 
-                <IconButton
-                    icon={<SignOut size={26} color={colors.gray[300]} />}
-                    onPress={handleLogout}
-                />
-            </HStack>
+                    <IconButton
+                        icon={<SignOut size={26} color={colors.gray[300]} />}
+                        onPress={handleLogout}
+                    />
+                </HStack>
+
+                {
+                    auth().currentUser.displayName &&
+                    <Text color="white" fontSize={20} pb={2} fontWeight="bold">
+                        Olá, {auth().currentUser.displayName.split(" ")[0]}
+                    </Text>
+                }
+            </VStack>
 
             <VStack flex={1} px={6}>
                 <HStack w="full" mt={8} mb={4} justifyContent="space-between" alignItems="center">
@@ -95,18 +110,36 @@ export function Home() {
                     </Text>
                 </HStack>
 
-                <HStack space={3} mb={8}>
+                <HStack space={3} mb={2}>
                     <Filter
+                        color={colors.secondary[700]}
                         title="em andamento"
                         type="open"
                         onPress={() => setStatusSelected('open')}
                         isActive={statusSelected === 'open'}
                     />
                     <Filter
+                        color={colors.green[400]}
                         title="finalizados"
                         type="closed"
                         onPress={() => setStatusSelected('closed')}
                         isActive={statusSelected === 'closed'}
+                    />
+                </HStack>
+                <HStack space={3} mb={8}>
+                    <Filter
+                        color="white"
+                        title="Todos"
+                        type="open"
+                        onPress={() => setJustMine(false)}
+                        isActive={!justMine}
+                    />
+                    <Filter
+                        color="white"
+                        title="Os meus"
+                        type="closed"
+                        onPress={() => setJustMine(true)}
+                        isActive={justMine}
                     />
                 </HStack>
 
