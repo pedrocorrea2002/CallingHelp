@@ -36,11 +36,11 @@ If you don't want to test the project on your own cellphone, you will need to in
 >expo run:android
 >```
 
-> If you are using the emulator of the Android Studio and after the executing of the command above, the emulator just open and the terminal pause in the message "Opening name_of_the_device", press ctrl+c to stop the execution and execute the command again, now with the emulator opened.
+> If you are using the emulator of the Android Studio and after the executing of the command above, the emulator just open and the terminal pauses with the message "Opening name_of_the_device", press ctrl+c to stop the execution and execute the command again, now with the emulator opened.
 
 ### References
 
-This project was made based on the one showed during the event Ignite Lab 3 from ![Rocketseat](https://www.rocketseat.com.br/).
+This project was made based on the one showed during the event Ignite Lab 3 from [Rocketseat](https://www.rocketseat.com.br/).
 
 # [Versão portuguesa]
 ### Sobre
@@ -86,7 +86,7 @@ Se você quer testar o projeto no seu próprio celular, você vai precisar insta
 
 ### Referência
 
-Este projeto foi feito com base no projeto apresentado no evento Ignite Lab 3 da ![Rocketseat](https://www.rocketseat.com.br/).
+Este projeto foi feito com base no projeto apresentado no evento Ignite Lab 3 da [Rocketseat](https://www.rocketseat.com.br/).
 
 # [Screenshoot]
 ![altText](https://github.com/pedrocorrea2002/Rocketseat_RocketHelp/blob/master/src/assets/AppScreenshot.jpg?raw=true)
