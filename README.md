@@ -9,6 +9,17 @@ It's very common for who works with IT, that when a person in the office is havi
 
 This project was made based on the one showed during the event Ignite Lab 3 from ![Rocketseat](https://www.rocketseat.com.br/)
 
+### Requirements
+- node (Version 16.16.0 or superior) -- Not tested in lower versions
+- npm (Version 8.11.0 or superior) -- Not tested in lower versions
+- yarn (Version 1.12.19 or superior) -- Not tested in lower versions
+- expo (Version 5.5.1 or superior) -- Not tested in lower versions
+- java (Version 1.8.0_021 or superior) -- Not tested in lower versions
+
+If you need some help to update your environment ![click here](https://www.notion.so/Atualiza-o-vers-es-diferentes-484cad4aa4354355b366d6524e7d2bc5) and ![here](https://www.java.com/en/download/)
+
+If you don't want to test the project on your own cellphone you will need to install Android Studio, ![here is a guide of how to configure Android Studio]()
+
 ## [Versão portuguesa]
 ### Sobre
 
