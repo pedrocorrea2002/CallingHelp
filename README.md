@@ -1,3 +1,7 @@
+# RocketHelp
+
+![altText](https://github.com/pedrocorrea2002/Rocketseat_RocketHelp/blob/master/src/assets/AppScreenshot.jpg?raw=true)
+
 ## [English version]
 ### About
 
