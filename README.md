@@ -63,13 +63,13 @@ Se você quer testar o projeto no seu próprio celular, você vai precisar insta
 
 >Acesse a pasta onde deseja baixar o projeto e execute o comando abaixo no seu terminal para baixar o projeto ou baixe manualmente pelo próprio gitHub e então extraia o .rar na pasta desejada.
 >```
->git clone https://github.com/pedrocorrea2002/Rocketseat_RocketHelp.git
+>git clone https://github.com/pedrocorrea2002/CallingHelp.git
 >```
 >OBS: Certifique se o endereço mostrado no terminal é o mesmo da pasta que você deseja baixar o projeto antes de executar o comando acima.
 
 >Depois do projeto estar baixado, use este comando para entrar na pasta do projeto.
 >```
->cd .\Rocketseat_RocketHelp\
+>cd .\CallingHelp\
 >```
 
 >Feito isso, execute o comando abaixo dentro da pasta do projeto para instalar a Node Modules.
