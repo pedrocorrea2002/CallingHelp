@@ -1,7 +1,7 @@
 # [English version]
 ### About
 
-It's very common for who works with IT, that when a person in the office is having a problem with the computer, it's necessary to open a service call for someone of the IT come to solve the problem. RocketHelp is exactly for this, it allow users to open, visualize and put as "finished" the service calls.
+It's very common for who works with IT, that when a person in the office is having a problem with the computer, it's necessary to open a service call for someone of the IT come to solve the problem. CallingHelp is exactly for this, it allow users to open, visualize and put as "finished" the service calls.
 
 ### Requirements
 - node (Version 16.16.0 or superior) -- Not tested in lower versions
@@ -17,13 +17,13 @@ If you don't want to test the project on your own cellphone, you will need to in
 ### How to execute the project
 >Access the folder where you want to download the project and execute the command below on your terminal to download the project or download manually by using the Github itself and then extract the .rar on the desired folder.
 >```
->git clone https://github.com/pedrocorrea2002/Rocketseat_RocketHelp.git
+>git clone https://github.com/pedrocorrea2002/CallingHelp.git
 >```
 >OBS: Certify if the address of the folder shown in the terminal is the same of the folder where you want to download the project before executing the command above.
 
 >After the project be downloaded, use this command to enter in the project's folder.
 >```
->cd .\Rocketseat_RocketHelp\
+>cd .\CallingHelp\
 >```
 
 >After that, execute the command below inside the project's folder to install the Node Modules.
