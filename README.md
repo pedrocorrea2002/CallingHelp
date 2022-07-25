@@ -15,11 +15,11 @@ If you need some help to update or configure your environment [click here](https
 If you don't want to test the project on your own cellphone, you will need to install Android Studio, [see how to configure Android Studio in the minute 3:35](https://www.youtube.com/watch?v=ZGIU5aIRi9M).
 
 ### How to execute the project
->Access the folder where you want to download the project and execute the command below on your terminal to download the project or do the download manually by using the Github itself and then extract the .rar on the desired folder.
+>Access the folder where you want to download the project and execute the command below on your terminal to download the project or download manually by using the Github itself and then extract the .rar on the desired folder.
 >```
 >git clone https://github.com/pedrocorrea2002/Rocketseat_RocketHelp.git
 >```
->OBS: Certify if the address of the folder shown in the terminal is the same of the folder where you want to download the project
+>OBS: Certify if the address of the folder shown in the terminal is the same of the folder where you want to download the project executing the command above.
 
 >After the project be downloaded, use this command to enter in the project's folder.
 >```
@@ -61,7 +61,7 @@ Se você quer testar o projeto no seu próprio celular, você vai precisar insta
 
 ## Como executar o projeto
 
->Acesse a pasta onde deseja baixar o projeto e execute o comando abaixo no seu terminal para baixar o projeto ou faça o download manualmente pelo próprio gitHub e então extraia o .rar na pasta desejada.
+>Acesse a pasta onde deseja baixar o projeto e execute o comando abaixo no seu terminal para baixar o projeto ou baixe manualmente pelo próprio gitHub e então extraia o .rar na pasta desejada.
 >```
 >git clone https://github.com/pedrocorrea2002/Rocketseat_RocketHelp.git
 >```
