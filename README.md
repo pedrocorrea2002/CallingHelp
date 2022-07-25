@@ -19,7 +19,7 @@ If you don't want to test the project on your own cellphone, you will need to in
 >```
 >git clone https://github.com/pedrocorrea2002/Rocketseat_RocketHelp.git
 >```
->OBS: Certify if the address of the folder shown in the terminal is the same of the folder where you want to download the project executing the command above.
+>OBS: Certify if the address of the folder shown in the terminal is the same of the folder where you want to download the project before executing the command above.
 
 >After the project be downloaded, use this command to enter in the project's folder.
 >```
@@ -65,7 +65,7 @@ Se você quer testar o projeto no seu próprio celular, você vai precisar insta
 >```
 >git clone https://github.com/pedrocorrea2002/Rocketseat_RocketHelp.git
 >```
->OBS: Certifique se o endereço mostrado no terminal é o mesmo da pasta que você deseja baixar o projeto.
+>OBS: Certifique se o endereço mostrado no terminal é o mesmo da pasta que você deseja baixar o projeto antes de executar o comando acima.
 
 >Depois do projeto estar baixado, use este comando para entrar na pasta do projeto.
 >```
