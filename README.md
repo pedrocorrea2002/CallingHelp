@@ -1,3 +1,5 @@
+![altText](https://github.com/pedrocorrea2002/Rocketseat_RocketHelp/blob/master/src/assets/AppScreenshot.jpg?raw=true)
+
 # [English version]
 ### ℹ️ About
 
@@ -87,6 +89,3 @@ Se você quer testar o projeto no seu próprio celular, você vai precisar insta
 ### 📚 Referência
 
 Este projeto foi feito com base no projeto apresentado no evento Ignite Lab 3 da [Rocketseat](https://www.rocketseat.com.br/).
-
-# [Screenshoot]
-![altText](https://github.com/pedrocorrea2002/Rocketseat_RocketHelp/blob/master/src/assets/AppScreenshot.jpg?raw=true)
