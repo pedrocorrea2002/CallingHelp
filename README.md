@@ -1,4 +1,4 @@
-![altText](https://github.com/pedrocorrea2002/Rocketseat_RocketHelp/blob/master/src/assets/AppScreenshot.jpg?raw=true)
+![altText](https://github.com/pedrocorrea2002/fluxo/blob/main/Demonstração.gif?raw=true)
 
 <details>
   <summary><h1>🇬🇧 English version 🇬🇧</h1></summary>
