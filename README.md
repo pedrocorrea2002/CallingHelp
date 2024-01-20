@@ -1,4 +1,4 @@
-![altText](https://github.com/pedrocorrea2002/fluxo/blob/main/Demonstração.gif?raw=true)
+![altText](https://github.com/pedrocorrea2002/CallingHelp/blob/master/src/assets/AppScreenshot.jpg?raw=true)
 
 <details>
   <summary><h1>🇬🇧 English version 🇬🇧</h1></summary>
