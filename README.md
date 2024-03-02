@@ -1,7 +1,7 @@
 ![altText](https://github.com/pedrocorrea2002/CallingHelp/blob/master/src/assets/AppScreenshot.jpg?raw=true)
 
 <details>
-  <summary><h1>English version</h1></summary>
+  <summary><b>English version</b></summary>
 
   ### ℹ️ About
   
@@ -49,7 +49,7 @@
 
 
 <details>
-  <summary><h1>Versão portuguesa (BR)</h1></summary>
+  <summary><b>Versão portuguesa (BR)</b></summary>
   
   ### ℹ️ Sobre
   
