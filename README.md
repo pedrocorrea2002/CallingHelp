@@ -58,7 +58,7 @@
 </details>
 <br>
 <details close>
-  <summary><b>Versão portuguesa (BR)</b></summary>
+  <summary><b>Versão portuguesa (Brasil)</b></summary>
   
   ### ℹ️ Sobre
   
